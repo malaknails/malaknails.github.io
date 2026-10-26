@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Malak Nails</title>
+<meta name="description" content="Malak Nails: rubber gel, gel colour, Gel-X, extensions and pedicure in Baissour, Lebanon. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Single colourful light look by choice: porcelain ground, plum ink, hot-pink accent, pastel bands */
+:root {
+  --bg: #FFF8F4; --ink: #24132E; --muted: #4E3D55; --soft: #6B5872;
+  --plum: #2A1638; --plum-2: #24132E; --on-plum: #F1E4F5; --on-plum-soft: #C9B6D0;
+  --accent: #C2185B; --pink: #FFE3EE; --pink-2: #FFB3CF; --lilac: #EFE6FF; --mint: #D6F5E8;
+  --butter: #FFF1B8; --peach: #FFD9C7; --line: rgba(36, 19, 46, 0.12); --white: #FFFFFF;
+  --display: 'Syne', 'Arial Black', sans-serif; --body: 'Manrope', system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+a { color: var(--ink); }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.in { max-width: 1200px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h2 { font-weight: 800; font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -0.03em; line-height: 1.05; }
+.eyebrow { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.lead { margin: 0; font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 62ch; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 14px 28px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; }
+.btn-pink { background: var(--accent); color: var(--white); }
+.btn-pink:hover { color: var(--white); filter: brightness(1.08); }
+.btn-line { border: 2px solid var(--ink); }
+
+.topbar { background: var(--plum-2); color: var(--pink); font-size: 14px; font-weight: 600; }
+.topbar .in { padding-block: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
+.topbar a { color: var(--pink); text-decoration: none; }
+
+header { border-bottom: 1px solid #F3DCE4; }
+header .in { padding-block: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.logo { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; text-decoration: none; }
+nav.main { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 15px; font-weight: 600; }
+nav.main a { text-decoration: none; padding: 10px 0; }
+nav.main .btn { min-height: 44px; padding: 10px 22px; }
+
+.hero .in { padding-block: 64px 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px; }
+.hero-text { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.hero h1 { font-weight: 800; font-size: clamp(40px, 6vw, 76px); line-height: 1; letter-spacing: -0.035em; }
+.hero .lead { font-size: 19px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.chips { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; font-weight: 700; }
+.chips li { padding: 10px 16px; border-radius: 999px; }
+.hero-photo { flex: 1 1 360px; min-width: 0; display: flex; justify-content: center; }
+.hero-photo img { width: 100%; max-width: 460px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 32px; display: block; box-shadow: 0 24px 48px rgba(36, 19, 46, 0.18); }
+.real { flex: 1 1 100%; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.real-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.real-head h2 { font-size: 26px; letter-spacing: -0.02em; }
+.real-head a { font-weight: 700; font-size: 15px; padding: 10px 0; }
+.grid4 { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.grid4 img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; display: block; }
+
+.gallery { background: var(--plum); color: var(--bg); }
+.gallery .in { padding-block: 88px; display: flex; flex-direction: column; gap: 36px; }
+.gallery .eyebrow { color: var(--pink-2); }
+.gallery-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.gallery-head > div { display: flex; flex-direction: column; gap: 12px; }
+.gallery-head a { color: var(--pink); font-weight: 700; padding: 10px 0; }
+.ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ggrid img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; display: block; }
+figcaption { font-size: 15px; font-weight: 600; color: var(--on-plum); }
+
+.prices .in { padding-block: 96px; display: flex; flex-direction: column; gap: 36px; }
+.prices-head { display: flex; flex-direction: column; gap: 12px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.card { border-radius: 24px; padding: 30px; display: flex; flex-direction: column; }
+.card h3 { font-weight: 700; font-size: 24px; margin-bottom: 10px; }
+.row { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-top: 1px solid var(--line); }
+.row-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.row-top span { font-weight: 700; font-size: 17px; }
+.row-top b { font-weight: 800; font-size: 18px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.row p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+
+.how { background: var(--lilac); }
+.how .in { padding-block: 88px; display: flex; flex-direction: column; gap: 36px; }
+.steps { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.steps li { border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.steps .n { font-family: var(--display); font-weight: 800; font-size: 40px; }
+.steps h3 { font-family: var(--body); font-size: 19px; font-weight: 700; }
+.steps p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+
+.about .in { padding-block: 96px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+.about-art { flex: 1 1 320px; min-width: 0; max-width: 440px; aspect-ratio: 1 / 1; border-radius: 32px; background: var(--lilac); display: flex; align-items: center; justify-content: center; gap: 16px; }
+.nail { border-radius: 50% 50% 18px 18px / 42% 42% 18px 18px; }
+.about-text { flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.about-text p { margin: 0; font-size: 18px; line-height: 1.65; color: var(--muted); max-width: 60ch; }
+
+.faq { background: var(--butter); }
+.faq .in { max-width: 860px; padding-block: 96px; display: flex; flex-direction: column; gap: 28px; }
+details { border-bottom: 1px solid rgba(36, 19, 46, 0.18); }
+summary { cursor: pointer; font-weight: 700; font-size: 18px; padding: 18px 0; }
+details p { margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: var(--muted); }
+
+.book .in { padding-block: 96px; }
+.book-box { background: var(--plum); color: var(--bg); border-radius: 36px; padding: clamp(28px, 5vw, 56px); display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+.book-info { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.book-info .eyebrow { color: var(--pink-2); }
+.book-info p { margin: 0; font-size: 17px; line-height: 1.6; color: var(--on-plum); }
+.book-info .contact { display: flex; flex-direction: column; gap: 8px; font-size: 16px; color: var(--on-plum); }
+.book-info .contact a { color: var(--pink); font-weight: 700; }
+form { flex: 1 1 340px; min-width: 0; background: var(--bg); color: var(--ink); border-radius: 24px; padding: 26px; display: flex; flex-direction: column; gap: 16px; }
+label { display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; }
+input, select { font: inherit; font-weight: 500; font-size: 16px; padding: 13px 15px; border: 1px solid #CDBBD3; border-radius: 12px; background: var(--white); color: var(--ink); width: 100%; }
+form .btn { width: 100%; font-size: 17px; }
+.note { margin: 0; font-size: 13px; color: var(--soft); text-align: center; }
+
+footer { background: var(--plum-2); color: var(--on-plum); }
+footer .in { padding-block: 52px 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; font-size: 15px; }
+footer a { color: var(--on-plum); }
+footer .col { display: flex; flex-direction: column; gap: 10px; }
+footer .brand { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--bg); }
+footer .sub { color: var(--on-plum-soft); }
+.copy { border-top: 1px solid #3E2A4A; }
+.copy .in { padding-block: 18px 28px; font-size: 13px; color: var(--on-plum-soft); }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } .btn:hover { transform: translateY(-1px); } }
+</style>
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+
+<div class="topbar"><div class="in">
+  <span>By appointment only · Baissour, Lebanon</span>
+  <a href="https://wa.me/96171083936">WhatsApp +961 71 083 936</a>
+</div></div>
+
+<header><div class="in">
+  <a class="logo" href="#top">Malak Nails</a>
+  <nav class="main" aria-label="Main">
+    <a href="#gallery">Gallery</a>
+    <a href="#prices">Prices</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-pink" href="#book">Book now</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="in">
+  <div class="hero-text">
+    <p class="eyebrow">Nail art · Gel · Extensions</p>
+    <h1>Beautiful nails, designed around you.</h1>
+    <p class="lead">Rubber gel, gel colour, Gel-X and full extension sets by Malak, in a calm private studio in Baissour.</p>
+    <div class="ctas">
+      <a class="btn btn-pink" href="#book">Book an appointment</a>
+      <a class="btn btn-line" href="#prices">View prices</a>
+    </div>
+    <ul class="chips">
+      <li style="background: var(--pink)">Sterilised tools</li>
+      <li style="background: var(--lilac)">Premium gel products</li>
+      <li style="background: var(--mint)">One client at a time</li>
+    </ul>
+  </div>
+  <div class="hero-photo">
+    <img src="img/plum-french.jpg" alt="Plum almond nails with milky French tips and a glitter accent, by Malak Nails">
+  </div>
+  <div class="real">
+    <div class="real-head">
+      <h2>Real sets by Malak</h2>
+      <a href="https://www.instagram.com/malak__nails___">More on Instagram →</a>
+    </div>
+    <div class="grid4">
+      <img src="img/pink-almond.jpg" alt="Pink almond nails with hand-painted dots" loading="lazy">
+      <img src="img/lilac-ombre.jpg" alt="Lilac almond nails with a dotted accent nail" loading="lazy">
+      <img src="img/midnight-blue.jpg" alt="Midnight blue sparkle nails" loading="lazy">
+      <img src="img/red-festive.jpg" alt="Red nails with a white accent design" loading="lazy">
+    </div>
+  </div>
+</div></section>
+
+<section class="gallery" id="gallery"><div class="in">
+  <div class="gallery-head">
+    <div>
+      <p class="eyebrow">Gallery</p>
+      <h2>Recent sets</h2>
+    </div>
+    <a href="https://www.instagram.com/malak__nails___">See more on Instagram @malak__nails___ →</a>
+  </div>
+  <div class="ggrid">
+    <figure><img src="img/g-blue-french.jpg" alt="Blue French tip nails by Malak Nails" loading="lazy"><figcaption>Blue French tips</figcaption></figure>
+    <figure><img src="img/g-black-leopard.jpg" alt="Black and leopard print nails by Malak Nails" loading="lazy"><figcaption>Black &amp; leopard</figcaption></figure>
+    <figure><img src="img/g-evil-eye.jpg" alt="Evil eye nail art by Malak Nails" loading="lazy"><figcaption>Evil eye</figcaption></figure>
+    <figure><img src="img/g-butter-yellow.jpg" alt="Butter yellow nails by Malak Nails" loading="lazy"><figcaption>Butter yellow</figcaption></figure>
+    <figure><img src="img/g-baby-blue.jpg" alt="Baby blue glitter nails by Malak Nails" loading="lazy"><figcaption>Baby blue glitter</figcaption></figure>
+    <figure><img src="img/g-emerald-french.jpg" alt="Emerald French nails by Malak Nails" loading="lazy"><figcaption>Emerald French</figcaption></figure>
+    <figure><img src="img/g-sky-blue-art.jpg" alt="Sky blue nails with leaf art by Malak Nails" loading="lazy"><figcaption>Sky blue leaf art</figcaption></figure>
+    <figure><img src="img/g-cobalt-marble.jpg" alt="Cobalt blue marble nails by Malak Nails" loading="lazy"><figcaption>Cobalt marble</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="prices" id="prices"><div class="in">
+  <div class="prices-head">
+    <p class="eyebrow">Prices</p>
+    <h2>Menu &amp; prices</h2>
+    <p class="lead">Prices may vary with length and design.</p>
+  </div>
+  <div class="cards">
+    <div class="card" style="background: var(--pink)">
+      <h3>Gel</h3>
+      <div class="row"><div class="row-top"><span>Solid rubber gel</span><b>$15</b></div><p>A strong, flexible base that protects and strengthens natural nails.</p></div>
+      <div class="row"><div class="row-top"><span>Solid gel color</span><b>$10</b></div><p>Long-wear gel colour in your choice of shade.</p></div>
+      <div class="row"><div class="row-top"><span>Custom nail art</span><b>$1 / nail</b></div><p>Hand-painted designs, chrome, French, charms and 3D.</p></div>
+    </div>
+    <div class="card" style="background: var(--lilac)">
+      <h3>Extensions</h3>
+      <div class="row"><div class="row-top"><span>Gel-X</span><b>$25</b></div><p>Soft-gel tips in any length: almond, coffin or square.</p></div>
+      <div class="row"><div class="row-top"><span>Full set gel extensions</span><b>$30</b></div><p>Sculpted gel extensions built to your chosen length and shape.</p></div>
+      <div class="row"><div class="row-top"><span>Refill gel</span><b>$20</b></div><p>Rebalance and refresh your current set.</p></div>
+    </div>
+    <div class="card" style="background: var(--mint)">
+      <h3>Pedicure</h3>
+      <div class="row"><div class="row-top"><span>Pedicure + pose</span><b>$5</b></div></div>
+      <div class="row"><div class="row-top"><span>Pedicure + gel color</span><b>$13</b></div></div>
+      <div class="row"><div class="row-top"><span>Safe removal</span><b>$3</b></div><p>Gentle removal of gel or extensions that protects your natural nail.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="how"><div class="in">
+  <h2>How booking works</h2>
+  <ol class="steps">
+    <li style="background: var(--pink)"><span class="n" style="color: #A3154E">01</span><h3>Pick your service</h3><p>Choose from the menu and add any inspiration photos you love.</p></li>
+    <li style="background: var(--butter)"><span class="n" style="color: #8A5A00">02</span><h3>Send a request</h3><p>Use the form below. It opens WhatsApp with your details filled in.</p></li>
+    <li style="background: var(--mint)"><span class="n" style="color: #0B6B58">03</span><h3>Get confirmed</h3><p>Malak replies with an available time and confirms your slot.</p></li>
+  </ol>
+</div></section>
+
+<section class="about" id="about"><div class="in">
+  <div class="about-art" role="img" aria-label="Illustration of three painted nails in lilac, pink and mint">
+    <div class="nail" style="width: 64px; height: 190px; background: #C9B2FF"></div>
+    <div class="nail" style="width: 70px; height: 240px; background: var(--accent)"></div>
+    <div class="nail" style="width: 64px; height: 200px; background: #2FA38A"></div>
+  </div>
+  <div class="about-text">
+    <p class="eyebrow">About</p>
+    <h2>Hi, I'm Malak.</h2>
+    <p>Malak Nails is a small private studio where every appointment gets full, unhurried attention. From a clean solid gel colour to a full set of extensions with custom art, each set is made to suit your hands, your style and your everyday life.</p>
+    <p>Your nail health always comes first: gentle prep, quality products and careful removal, so your natural nails stay strong between sets.</p>
+  </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="in">
+  <h2>Good to know</h2>
+  <div>
+    <details><summary>How do I book?</summary><p>Use the booking form on this page or message Malak on WhatsApp at +961 71 083 936. She will reply with an available time.</p></details>
+    <details><summary>What if I need to cancel or I am running late?</summary><p>Please message as early as possible so your slot can go to someone else. If you are running late, let Malak know and she will do her best to fit you in.</p></details>
+    <details><summary>How long will my gel or extensions last?</summary><p>Most sets last around 3 to 4 weeks with good aftercare. Book a refill rather than picking them off, to keep your natural nails healthy.</p></details>
+    <details><summary>Can I bring my own design idea?</summary><p>Yes, please do. Send inspiration photos when you book so there is enough time set aside for your design.</p></details>
+    <details><summary>Should I come with clean nails?</summary><p>Please come without polish if you can. If you have gel or extensions from elsewhere, book a removal with your new set.</p></details>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="in">
+  <div class="book-box">
+    <div class="book-info">
+      <p class="eyebrow">Book</p>
+      <h2>Request an appointment</h2>
+      <p>Fill in a few details and tap the button. WhatsApp opens with your message ready to send.</p>
+      <div class="contact">
+        <span>Baissour, Lebanon</span>
+        <span>WhatsApp: <a href="https://wa.me/96171083936">+961 71 083 936</a></span>
+        <a href="https://www.instagram.com/malak__nails___">Instagram @malak__nails___</a>
+      </div>
+    </div>
+    <form id="bookForm">
+      <label for="name">Your name
+        <input id="name" type="text" placeholder="e.g. Sara" autocomplete="name">
+      </label>
+      <label for="service">Service
+        <select id="service">
+          <option>Solid rubber gel ($15)</option>
+          <option>Solid gel color ($10)</option>
+          <option>Custom nail art ($1 / nail)</option>
+          <option>Gel-X ($25)</option>
+          <option>Full set gel extensions ($30)</option>
+          <option>Refill gel ($20)</option>
+          <option>Pedicure + pose ($5)</option>
+          <option>Pedicure + gel color ($13)</option>
+          <option>Safe removal ($3)</option>
+        </select>
+      </label>
+      <label for="when">Preferred day &amp; time
+        <input id="when" type="text" placeholder="e.g. Saturday afternoon">
+      </label>
+      <a id="waBtn" class="btn btn-pink" href="https://wa.me/96171083936">Send request on WhatsApp</a>
+      <p class="note">Your appointment is confirmed once Malak replies.</p>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="in">
+    <div class="col">
+      <span class="brand">Malak Nails</span>
+      <span class="sub">Gel, extensions and pedicures. By appointment.</span>
+    </div>
+    <nav class="col" aria-label="Footer">
+      <a href="#prices">Prices</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book">Book</a>
+    </nav>
+    <div class="col">
+      <span>Baissour, Lebanon</span>
+      <a href="https://wa.me/96171083936">WhatsApp +961 71 083 936</a>
+      <a href="https://www.instagram.com/malak__nails___">@malak__nails___</a>
+    </div>
+  </div>
+  <div class="copy"><div class="in">© 2026 Malak Nails</div></div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('bookForm');
+  var btn = document.getElementById('waBtn');
+  var name = document.getElementById('name');
+  var service = document.getElementById('service');
+  var when = document.getElementById('when');
+  function update() {
+    var msg = 'Hi Malak! I would like to book an appointment.\n'
+      + 'Name: ' + (name.value.trim() || '-') + '\n'
+      + 'Service: ' + service.value + '\n'
+      + 'Preferred time: ' + (when.value.trim() || '-');
+    btn.href = 'https://wa.me/96171083936?text=' + encodeURIComponent(msg);
+  }
+  [name, service, when].forEach(function (el) { el.addEventListener('input', update); el.addEventListener('change', update); });
+  form.addEventListener('submit', function (e) { e.preventDefault(); update(); });
+  update();
+})();
+</script>
+
+</body>
+</html>
