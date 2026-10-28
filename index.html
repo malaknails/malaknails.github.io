@@ -10,10 +10,10 @@
 <style>
 /* Single colourful light look by choice: porcelain ground, plum ink, hot-pink accent, pastel bands */
 :root {
-  --bg: #FFF8F4; --ink: #24132E; --muted: #4E3D55; --soft: #6B5872;
-  --plum: #2A1638; --plum-2: #24132E; --on-plum: #F1E4F5; --on-plum-soft: #C9B6D0;
-  --accent: #C2185B; --pink: #FFE3EE; --pink-2: #FFB3CF; --lilac: #EFE6FF; --mint: #D6F5E8;
-  --butter: #FFF1B8; --peach: #FFD9C7; --line: rgba(36, 19, 46, 0.12); --white: #FFFFFF;
+  --bg: #FFF0F5; --ink: #3B0D27; --muted: #5E3048; --soft: #7A4A63;
+  --plum: #5A1438; --plum-2: #3B0D27; --on-plum: #FFE3EE; --on-plum-soft: #F2B8CF;
+  --accent: #D81B60; --pink: #FFD3E4; --pink-2: #FFB3CF; --lilac: #FCE1EE; --mint: #FFE3EF;
+  --butter: #FFE9F2; --peach: #FFC9DD; --line: rgba(36, 19, 46, 0.12); --white: #FFFFFF;
   --display: 'Syne', 'Arial Black', sans-serif; --body: 'Manrope', system-ui, sans-serif;
   color-scheme: light;
 }
@@ -36,7 +36,7 @@ h2 { font-weight: 800; font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -0.0
 .topbar .in { padding-block: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
 .topbar a { color: var(--pink); text-decoration: none; }
 
-header { border-bottom: 1px solid #F3DCE4; }
+header { border-bottom: 1px solid #F8C8DA; }
 header .in { padding-block: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .logo { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; text-decoration: none; }
 nav.main { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 15px; font-weight: 600; }
@@ -110,7 +110,7 @@ details p { margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: var(--mu
 .book-info .contact a { color: var(--pink); font-weight: 700; }
 form { flex: 1 1 340px; min-width: 0; background: var(--bg); color: var(--ink); border-radius: 24px; padding: 26px; display: flex; flex-direction: column; gap: 16px; }
 label { display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; }
-input, select { font: inherit; font-weight: 500; font-size: 16px; padding: 13px 15px; border: 1px solid #CDBBD3; border-radius: 12px; background: var(--white); color: var(--ink); width: 100%; }
+input, select { font: inherit; font-weight: 500; font-size: 16px; padding: 13px 15px; border: 1px solid #E9A9C3; border-radius: 12px; background: var(--white); color: var(--ink); width: 100%; }
 form .btn { width: 100%; font-size: 17px; }
 .note { margin: 0; font-size: 13px; color: var(--soft); text-align: center; }
 
@@ -120,7 +120,7 @@ footer a { color: var(--on-plum); }
 footer .col { display: flex; flex-direction: column; gap: 10px; }
 footer .brand { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--bg); }
 footer .sub { color: var(--on-plum-soft); }
-.copy { border-top: 1px solid #3E2A4A; }
+.copy { border-top: 1px solid #6E2A4C; }
 .copy .in { padding-block: 18px 28px; font-size: 13px; color: var(--on-plum-soft); }
 @media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } .btn:hover { transform: translateY(-1px); } }
 </style>
@@ -230,16 +230,16 @@ footer .sub { color: var(--on-plum-soft); }
   <h2>How booking works</h2>
   <ol class="steps">
     <li style="background: var(--pink)"><span class="n" style="color: #A3154E">01</span><h3>Pick your service</h3><p>Choose from the menu and add any inspiration photos you love.</p></li>
-    <li style="background: var(--butter)"><span class="n" style="color: #8A5A00">02</span><h3>Send a request</h3><p>Use the form below. It opens WhatsApp with your details filled in.</p></li>
-    <li style="background: var(--mint)"><span class="n" style="color: #0B6B58">03</span><h3>Get confirmed</h3><p>Malak replies with an available time and confirms your slot.</p></li>
+    <li style="background: var(--butter)"><span class="n" style="color: #A3154E">02</span><h3>Send a request</h3><p>Use the form below. It opens WhatsApp with your details filled in.</p></li>
+    <li style="background: var(--mint)"><span class="n" style="color: #A3154E">03</span><h3>Get confirmed</h3><p>Malak replies with an available time and confirms your slot.</p></li>
   </ol>
 </div></section>
 
 <section class="about" id="about"><div class="in">
   <div class="about-art" role="img" aria-label="Illustration of three painted nails in lilac, pink and mint">
-    <div class="nail" style="width: 64px; height: 190px; background: #C9B2FF"></div>
+    <div class="nail" style="width: 64px; height: 190px; background: #F48FB1"></div>
     <div class="nail" style="width: 70px; height: 240px; background: var(--accent)"></div>
-    <div class="nail" style="width: 64px; height: 200px; background: #2FA38A"></div>
+    <div class="nail" style="width: 64px; height: 200px; background: #FF80AB"></div>
   </div>
   <div class="about-text">
     <p class="eyebrow">About</p>
